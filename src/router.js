@@ -1,23 +1,36 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import Home from './views/Home.vue'
+
+// Views
+import App from './App.vue'
+import Experience from './views/Experience.vue'
+import Resume from './views/Resume.vue'
+import Uiux from './views/Uiux.vue'
 
 Vue.use(Router)
 
 export default new Router({
+  mode: 'history',
   routes: [
+    // {
+    //   path: '/',
+    //   name: 'app',
+    //   component: App
+    // },
     {
-      path: '/',
-      name: 'home',
-      component: Home
+      path: '/experience',
+      name: 'experience',
+      component: Experience
     },
     {
-      path: '/about',
-      name: 'about',
-      // route level code-splitting
-      // this generates a separate chunk (about.[hash].js) for this route
-      // which is lazy-loaded when the route is visited.
-      component: () => import(/* webpackChunkName: "about" */ './views/About.vue')
-    }
+      path: '/uiux-designs',
+      name: 'uiux',
+      component: Uiux
+    },
+    {
+      path: '/resume',
+      name: 'resume',
+      component: Resume
+    },
   ]
 })

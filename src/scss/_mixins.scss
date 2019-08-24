@@ -1,0 +1,33 @@
+
+
+// MEDIA QUERY MANAGER
+/*
+    Phone:              0-600px
+    Tablet Portrait:    600-900px
+    Tablet Landscape:   900-1200px
+    Desktop:            1200-1800px
+    Big Desktop:        1800px +
+*/
+@mixin respond($breakpoint) {
+
+    // Phone Breakpoint
+    @if $breakpoint == phone {
+        @media (max-width: 37.5em) { @content }; // 600px / 16
+    }
+    // Tab Portrait Breakpoint
+    @if $breakpoint == tab-portrait {
+        @media (max-width: 56.25em) { @content };
+    }
+    // Tab Landscape Breakpoint
+    @if $breakpoint == tab-landscape {
+        @media (max-width: 75em) { @content };
+    }
+    //Desktop
+    @if $breakpoint == desktop {
+        @media (max-width: 112.5em) { @content };
+    }
+    //Big Desktop
+    // @if $breakpoint == big-desktop {
+    //     @media (min-width: 112.5em) { @content };
+    // }
+}

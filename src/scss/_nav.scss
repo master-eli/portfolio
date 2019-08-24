@@ -1,0 +1,121 @@
+nav {
+    margin-bottom: 2rem;
+    .nav {
+        
+        padding-bottom: 3rem;
+        a {
+            display: inline-block;
+            font-size: 3.5rem;
+            text-align: left;
+            padding-left: 1rem;
+            padding-bottom: .8rem;
+            transition: all .5s;
+            cursor: pointer;
+            text-transform: uppercase;
+            position: relative;
+            color: transparent;
+            width: 100%;
+            text-decoration: none;
+
+            @include respond(desktop) {
+                font-size: 3rem;
+            }
+
+            h1 {
+                color: black;
+                display: inline-block;
+                transform: translateY(0);
+                transition: all .6s;
+            }
+            
+            span {
+                z-index: -1;
+                position: absolute;
+                transform: scaleX(1);
+                height: 2rem;
+                bottom: 1rem;
+                left: 0;
+                transition: all .2s;
+                background-color: $color-experience;
+                transition: all .6s;
+                
+                @include respond(desktop) {
+                    height: 2rem;
+                }
+                @include respond(tab-landscape) {
+                    height: 1.7rem;
+                }
+                &:hover {
+                    height: 100%;
+                }
+            }
+
+            &.nav-experience {
+                span {
+                    background-color: $color-experience;
+                    width: 50%;
+
+                    @include respond(desktop) {
+                        width: 40%;
+                    }
+                    @include respond(tab-landscape) {
+                        width: 55%;
+                    }
+                }
+            }
+            &.nav-uiux {
+                span {
+                    background-color: $color-uiux;
+                    width: 55%;
+
+                    @include respond(desktop) {
+                        width: 50%;
+                    }
+                    @include respond(tab-landscape) {
+                        width: 65%;
+                    }
+                }
+            }
+            &.nav-resume {
+                span {
+                    background-color: $color-resume;
+                    width: 35%;
+
+                    @include respond(desktop) {
+                        width: 30%;
+                    }
+                    @include respond(tab-landscape) {
+                        width: 40%;
+                    }
+                }
+            }
+
+            &.active {
+                transition: all .2s;
+                color: $color-primary-font;
+
+                &.nav-experience, 
+                &.nav-uiux,
+                &.nav-resume {
+                    transition: all .6s;
+                }
+
+                &.nav-experience:hover, 
+                &.nav-uiux:hover,
+                &.nav-resume:hover {
+                    h1 {
+                        transition: all .6s;
+                    }
+                }
+
+                h1 {
+                    transform: translateX(calc(40vw - 100%));
+                }
+
+                span {
+                    width: 98%;
+                }
+            }
+        }
+    }
+}

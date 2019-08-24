@@ -1,0 +1,44 @@
+ul {
+    li {
+        list-style: none;
+    }
+}
+
+.mt-md {
+    // margin-top: -20rem;
+    margin-bottom: 20rem;
+    @include respond(tab-landscape) {
+        margin-bottom: 15rem;
+    }
+    @include respond(tab-portrait) {
+        margin-bottom: 0rem;
+    }
+}
+
+a {
+    text-decoration: none;
+    color: #000;
+}
+
+.pl-sm {
+    padding-left: 1rem;
+}
+
+.container {
+    width: 90%;
+    margin: 0 auto;
+
+    @include respond(tab-portrait) {
+        width: 100%;
+        margin: 0;
+    }
+    @include respond(phone) {
+        width: 100vw;
+        margin: 0;
+    }
+}
+
+.container-sm {
+    width: 90vw;
+    margin: 0 auto;
+}

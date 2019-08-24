@@ -1,0 +1,35 @@
+.footer {
+    margin-top: 4rem;
+
+    @include respond(desktop) {
+        margin-top: 2rem;
+    }
+
+    .icons {
+        position: relative;
+        display: inline-block;
+        i {
+            cursor: pointer;
+            &::before {
+                padding-right: 1.7rem;
+
+                @include respond(desktop) {
+                    padding-right: 1.5rem;
+                }
+            }
+        }
+        &::before {
+            z-index: -1;
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            height: 1.5rem;
+            width: 100%;
+            background-color: #FFF953;
+        }
+    }
+}
+
+//#7A48BB
+// #7A48BB

@@ -1,0 +1,96 @@
+.projects {
+    margin-left: 8rem;
+    
+    @include respond(desktop) {
+        margin-left: 6rem;
+    }
+    @include respond(tab-landscape) {
+        margin-left: 5rem;
+    }
+    @include respond(tab-portrait) {
+        margin-left: 0;
+    }
+    
+    .project-list {
+        li {
+            @include respond(desktop) {
+                margin-left: 4rem;
+            }
+            @include respond(tab-landscape) {
+                margin-left: 3rem;
+            }
+            @include respond(tab-portrait) {
+                margin-left: 10rem;
+            }
+        }
+        // @include respond(tab-portrait) {
+        //     width: 80%;
+        //     margin: 0 auto;
+        // }
+        &-group {
+            position: relative;
+            h2 {
+                font-size: 2.4rem;
+                margin-bottom: 1rem;
+                position: relative;
+
+                @include respond(desktop) {
+                    font-size: 2rem;
+                }
+                @include respond(desktop) {
+                    font-size: 1.8rem;
+                }
+
+                &::before {
+                    content: '';
+                    position: absolute;
+                    top: 30%;
+                    left: -8rem;
+                    width: 10%;
+                    height: .8rem;
+
+                    @include respond(desktop) {
+                        left: -7rem;
+                        width: 8%;
+                    }
+                    @include respond(tab-landscape) {
+                        left: -7rem;
+                        width: 14%;
+                    }
+                    @include respond(tab-portrait) {
+                        left: -6rem;
+                        width: 7%;
+                    }
+                }
+
+                &.saririt::before {
+                    background-color: #FFE18E;
+                }
+                &.casi::before {
+                    background-color: #8E9DFF;
+                }
+                &.jas::before {
+                    background-color: #FF9A8E;
+                }
+                &.sanut::before {
+                    background-color: #8EF3FF;
+                }
+            }
+            
+            .project-role {
+                font-size: 1.6rem;
+            }
+    
+            &:not(:last-child) {
+                margin-bottom: 4rem;
+
+                @include respond(desktop) {
+                    margin-bottom: 2rem;
+                }
+                @include respond(desktop) {
+                    margin-bottom: 3rem;
+                }
+            }
+        }
+    }
+}

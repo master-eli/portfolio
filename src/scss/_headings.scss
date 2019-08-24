@@ -1,0 +1,71 @@
+
+            
+.contents-2 {
+    position: relative;
+
+    .heading {
+        position: relative;
+        
+        &::before {
+            content: '';
+            z-index: -1;
+            position: absolute;
+            transform: scaleX(1);
+            height: 1.8rem;
+            width: 80%;
+            bottom: 0;
+            transition: all .2s;
+            transition: all .6s;
+        }
+    }
+
+    .heading.exp {
+        &::before {
+            background-color: $color-experience;
+            left: 0;
+        }
+        h1 {
+            font-size: 4rem;
+            transform: translateX(55%);
+            display: inline-block;
+
+            @include respond(phone) {
+                transform: translateX(45%);
+            }
+        }
+    }
+    .heading.uiux {
+        &::before {
+            background-color: $color-uiux;
+            right: 0;
+        }
+        h1 {
+            font-size: 4rem;
+            transform: translateX(25%);
+
+            @include respond(phone) {
+                transform: translateX(25%);
+            }
+        }
+    }
+    .heading.resume {
+        &::before {
+            background-color: $color-resume;
+            left: 0;
+        }
+        h1 {
+            font-size: 4rem;
+            transform: translateX(55%);
+
+            @include respond(phone) {
+                transform: translateX(45%);
+            }
+        }
+    }
+
+
+    .heading {
+        margin: 10rem 0 7rem;
+        width: 100%;
+    }
+}

@@ -1,0 +1,68 @@
+// colors
+$color-experience: #FF6565;
+$color-uiux: #C765FF;
+$color-resume: #65FFB2;
+
+$color-list-html: #799AE9;
+$color-list-js: #FF9C2C;
+$color-list-vue: #45FE9B;
+$color-list-jquery: #FFF953;
+$color-list-laravel: #F05340;
+
+$color-primary-font: #232323;
+
+$color-contents-bg: #F9F9F9;
+
+// fonts
+$primary-font: 'Roboto', sans-serif; 
+
+//grids
+$grid-row-gutter: 1rem;
+$grid-col-gutter: 1rem;
+
+// resets
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html {
+    box-sizing: border-box;
+    // font-size: 62.5%; // 10px / 16px(default) = 62.5% -> 1rem = 10px
+    font-size: 75%; // 10px / 16px(default) = 62.5% -> 1rem = 10px
+    font-family: $primary-font;
+    color: $color-primary-font;
+
+    @include respond(phone) {
+        font-size: 50%;
+    }
+    @include respond(tab-portrait) {
+        font-size: 50%;     // 8px / 16px = 50% -> 1rem = 8px
+    }
+    @include respond(tab-landscape) {
+        font-size: 56.25%;
+    }
+    @include respond(desktop) {
+        font-size: 62.5%; // 1rem = 12px
+    }
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+
+    @include respond(phone) {
+        width: 100vw;
+        overflow-x: hidden;
+    }
+}
+
+// .contents {
+//     background-color: $color-contents-bg;
+//     width: 100%;
+//     height: 100%;
+// }

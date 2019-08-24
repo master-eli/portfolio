@@ -1,0 +1,96 @@
+.resume {
+    .about {
+        
+        h4 {
+            font-size: 3rem;
+            margin-bottom: 2rem;
+            padding-left: 0;
+            padding-left: 1rem;
+            position: relative;
+            display: inline-block;
+            z-index: 2;
+            user-select: none;
+
+            @include respond(desktop) {
+                font-size: 2.5rem;
+            }
+
+            &::before {
+                z-index: -1;
+                position: absolute;
+                content: '';
+                background: $color-resume;
+                bottom: 0;
+                left: 0;
+                height: 1rem;
+                width: 100%;
+                transform: scaleX(1.05);
+                transform-origin: 0 0;
+                transition: transform .6s;
+            }
+        }
+        .description {
+            p {
+                font-size: 2rem;
+                line-height: 1.6;
+                letter-spacing: .1rem;
+            }
+            .skills {
+                margin-top: 2rem;
+            }
+            ul {
+                user-select: auto;
+            }
+        }
+    }
+}
+
+
+.btn-more {
+    margin-top: 2rem;
+    padding-right: 2rem;
+    font-size: 2.6rem;
+    text-align: right;
+        
+    @include respond(phone) {
+        padding-right: 0rem;
+    }
+    h3.more-designs {
+        display: inline-block;
+        position: relative;
+        padding-right: 2rem;
+        
+        @include respond(phone) {
+            padding-right: 0rem;
+        }
+
+        &:hover a {
+            cursor: pointer;
+            color: #fff;
+            text-shadow: 0 3px 6px rgba(0, 0, 0, .16);
+        }
+
+        @include respond(phone) {
+            font-size: 2rem;
+        }
+        
+        &::before {
+            content: '';
+            z-index: -1;
+            position: absolute;
+            background: $color-resume;
+            bottom: 0;
+            right: 0;
+            height: 1.5rem;
+            width: 110%;
+            transition: height .4s;
+
+            @include respond(phone) {
+                height: 1rem;
+            }
+        }
+        &:hover::before {
+            height: 100%;
+        }
+    }
+}
