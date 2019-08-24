@@ -2,7 +2,6 @@ import Vue from 'vue'
 import Router from 'vue-router'
 
 // Views
-import App from './App.vue'
 import Home from './views/Home.vue'
 import Experience from './views/Experience.vue'
 import Resume from './views/Resume.vue'
