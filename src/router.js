@@ -3,6 +3,7 @@ import Router from 'vue-router'
 
 // Views
 import App from './App.vue'
+import Home from './views/Home.vue'
 import Experience from './views/Experience.vue'
 import Resume from './views/Resume.vue'
 import Uiux from './views/Uiux.vue'
@@ -12,11 +13,11 @@ Vue.use(Router)
 export default new Router({
   mode: 'history',
   routes: [
-    // {
-    //   path: '/',
-    //   name: 'app',
-    //   component: App
-    // },
+    {
+      path: '/',
+      name: 'home',
+      component: Home
+    },
     {
       path: '/experience',
       name: 'experience',

@@ -1,0 +1,39 @@
+.home {
+    width: 50vw;
+    height: 100vh;
+    position: relative;
+    .svg-bg {
+        z-index: -1;
+        position: absolute;
+        // top: 10%;
+        top: calc(100vh - 90%);
+        right: -30rem;
+
+        @include respond(desktop) {
+            top: calc(100vh - 90%);
+        }
+        @include respond(tab-landscape) {
+            top: calc(100vh - 80%);
+        }
+        img {
+            width: 100%;
+            height: 100%;
+        }
+    }
+    .name {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+        place-items: center;
+        height: 100%;
+        z-index: 1;
+
+        h1 {
+            font-size: 3.8rem;
+            color: #fff;
+            text-shadow: 0 3px 6px rgba(0, 0, 0, .16);
+            user-select: none;
+            text-align: right;
+        }
+    }
+}

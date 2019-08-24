@@ -55,6 +55,10 @@ html, body {
     height: 100%;
     overflow: hidden;
 
+    @include respond(tab-portrait) {
+        overflow-y: auto;
+    }
+
     @include respond(phone) {
         width: 100vw;
         overflow-x: hidden;
