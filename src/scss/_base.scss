@@ -16,6 +16,9 @@ $color-contents-bg: #F9F9F9;
 // fonts
 $primary-font: 'Roboto', sans-serif; 
 
+//text
+$text-shadow: 0 3px 6px rgba(0, 0, 0, .16);
+
 //grids
 $grid-row-gutter: 1rem;
 $grid-col-gutter: 1rem;
@@ -60,6 +63,8 @@ body {
     width: 100%;
     height: 100%;
     overflow: hidden;
+
+    @include anti-flicker();
 
     @include respond(tab-portrait) {
         overflow-y: auto;

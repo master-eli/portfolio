@@ -107,9 +107,6 @@
             &:not(:last-child) {
                 margin-bottom: 4rem;
 
-                // @include respond(desktop) {
-                //     margin-bottom: 2rem;
-                // }
                 @include respond(desktop) {
                     margin-bottom: 3rem;
                 }

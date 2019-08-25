@@ -6,7 +6,8 @@
     padding-top: 6rem;
 
     @include respond(tab-landscape) {
-        padding-top: 0rem;
+        // padding-top: 0rem;
+        padding-top: 6rem;
     }
 
     .img {
@@ -14,19 +15,31 @@
             max-width: 100%;
         }
     }
-
-    // .img-label { 
         h2 {
             font-size: 4rem;
             display: inline-block;
             position: relative;
             z-index: 1;
+            
+            @include anti-flicker();
 
             @include respond(phone) {
                 font-size: 2.2rem;
             } 
             @include respond(sm-phone) {
                 font-size: 1.5rem;
+            }
+            
+            a {
+                transition: color .1s;
+            }
+            a:hover {
+                color: #fff;
+                text-shadow: $text-shadow;
+            }
+
+            &:hover::before {
+                height: 100%;
             }
 
             &::before {
@@ -38,6 +51,7 @@
                 bottom: 0;
                 left: 0;
                 transform: scale(1.2);
+                transition: height .2s;
 
                 @include respond(phone) {
                     height: 25%;
@@ -56,12 +70,7 @@
                 background-color: $color-uiux;
             }
         }
-    // }
     .btn-more {
-        // &.dribbble::before {
-        //     width: 110%;
-        //     background-color: $color-uiux;
-        // }
         h3.more-designs {
             &::before {
                 background-color: $color-uiux;
