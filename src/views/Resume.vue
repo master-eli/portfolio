@@ -1,5 +1,5 @@
 <template>
-    <div class="resume mt-md center">
+    <div class="resume mt-md center" :style="[isLarge ? { backgroundImage: `url(${this.bgResume})`, height: `${100}%` } : {}]">
         <div class="heading resume" v-if="!isLarge">
             <h1 class="bold resume">Resume</h1>
         </div>
@@ -26,6 +26,14 @@
 
 import { mapState } from 'vuex'
 export default {
+    data() {
+        return {
+            bgResume: require('../assets/resume_bg.svg'),
+            myBg: {
+                backgroundImage: `url(${this.bgResume})`
+            }
+        }
+    },
     computed: {
         ...mapState([
             'isLarge'

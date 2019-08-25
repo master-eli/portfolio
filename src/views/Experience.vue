@@ -1,5 +1,5 @@
 <template>
-    <div class="projects padding-sides mt-md center">
+    <div class="projects padding-sides mt-md center" :style="[isLarge ? { backgroundImage: `url(${this.bgExp})`, height: `${100}%` } : {}]">
         <div class="heading exp" v-if="!isLarge">
             <h1 class="bold exp">Experience</h1>
         </div>
@@ -28,6 +28,11 @@
 
 import { mapState } from 'vuex'
 export default {
+    data() {
+        return {
+            bgExp: require('../assets/circles_grid.svg')
+        }
+    },
     computed: {
         ...mapState([
             'isLarge'

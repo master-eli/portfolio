@@ -14,10 +14,6 @@ export default {
     data() {
         return {
             image: require('../assets/bg-intro.svg'),
-            publicPath: process.env.BASE_URL,
-            styleObject: {
-                backgroundImage: `url($(this.image))`
-            }
         }
     }
 }

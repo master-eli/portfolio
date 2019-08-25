@@ -72,6 +72,7 @@
             font-size: 3.5rem;
         }
         @include respond(sm-phone) {
+            // font-size: 2.3rem;
             font-size: 2.3rem;
         }
     }

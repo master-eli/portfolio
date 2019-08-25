@@ -1,4 +1,7 @@
 .projects {
+    background-repeat: no-repeat;
+    background-size: 50%;
+    background-position: center right;
     margin-left: 8rem;
     
     @include respond(desktop) {
