@@ -14,7 +14,6 @@
     @if $breakpoint == sm-phone {
         @media (max-width: 26.5625em) { @content };
     }
-
     // Phone Breakpoint
     @if $breakpoint == phone {
         @media (max-width: 37.5em) { @content }; // 600px / 16
@@ -38,6 +37,11 @@
     // Big Desktop
     @if $breakpoint == big-desktop {
         @media (min-width: 160em) { @content };
+    }
+
+    //heights
+    @if $breakpoint == tab-landscape-h {
+        @media (max-height: 64em) and (min-height: 60em) { @content };
     }
 
 }
