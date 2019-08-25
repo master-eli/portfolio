@@ -18,9 +18,17 @@
     @if $breakpoint == tab-portrait {
         @media (max-width: 56.25em) { @content };
     }
+    // Small Desktop Breakpoint
+    // @if $breakpoint == sm-desktop {
+    //     @media (max-width: 64em) { @content };
+    // }
     // Tab Landscape Breakpoint
     @if $breakpoint == tab-landscape {
+    }
         @media (max-width: 75em) { @content };
+    // Mid Desktop Breakpoint
+    @if $breakpoint == mid-desktop {
+        @media (max-width: 90em) { @content };
     }
     //Desktop
     @if $breakpoint == desktop {

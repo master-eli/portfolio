@@ -20,6 +20,9 @@ nav {
             @include respond(desktop) {
                 font-size: 3rem;
             }
+            @include respond(tab-landscape) {
+                font-size: 2.3rem;
+            }
 
             h1 {
                 color: black;
@@ -42,8 +45,11 @@ nav {
                 @include respond(desktop) {
                     height: 2rem;
                 }
+                @include respond(mid-desktop) {
+                    height: 1.85rem;
+                }
                 @include respond(tab-landscape) {
-                    height: 1.7rem;
+                    height: 1.5rem;
                 }
                 &:hover {
                     height: 100%;
@@ -53,39 +59,48 @@ nav {
             &.nav-experience {
                 span {
                     background-color: $color-experience;
-                    width: 50%;
+                    min-width: 50%;
 
                     @include respond(desktop) {
-                        width: 40%;
+                        min-width: 40%;
+                    }
+                    @include respond(mid-desktop) {
+                        min-width: 45%;
                     }
                     @include respond(tab-landscape) {
-                        width: 55%;
+                        min-width: 50%;
                     }
                 }
             }
             &.nav-uiux {
                 span {
                     background-color: $color-uiux;
-                    width: 55%;
+                    min-width: 55%;
 
                     @include respond(desktop) {
-                        width: 50%;
+                        min-width: 50%;
+                    }
+                    @include respond(mid-desktop) {
+                        min-width: 55%;
                     }
                     @include respond(tab-landscape) {
-                        width: 65%;
+                        min-width: 60%;
                     }
                 }
             }
             &.nav-resume {
                 span {
                     background-color: $color-resume;
-                    width: 35%;
+                    min-width: 35%;
 
                     @include respond(desktop) {
-                        width: 30%;
+                        min-width: 30%;
+                    }
+                    @include respond(mid-desktop) {
+                        min-width: 35%;
                     }
                     @include respond(tab-landscape) {
-                        width: 40%;
+                        min-width: 40%;
                     }
                 }
             }
