@@ -1,7 +1,7 @@
 
-            
 .contents-2 {
     position: relative;
+    overflow-x: hidden;
 
     .heading {
         position: relative;
@@ -16,6 +16,10 @@
             bottom: 0;
             transition: all .2s;
             transition: all .6s;
+
+            @include respond(sm-phone) {
+                height: 1.1rem;
+            }
         }
     }
 
@@ -25,12 +29,12 @@
             left: 0;
         }
         h1 {
-            font-size: 4rem;
             transform: translateX(55%);
-            display: inline-block;
+            // display: inline-block;
 
             @include respond(phone) {
-                transform: translateX(45%);
+                // transform: translateX(calc(100% - 60vw));
+                transform: translateX(35%);
             }
         }
     }
@@ -40,7 +44,6 @@
             right: 0;
         }
         h1 {
-            font-size: 4rem;
             transform: translateX(25%);
 
             @include respond(phone) {
@@ -54,7 +57,6 @@
             left: 0;
         }
         h1 {
-            font-size: 4rem;
             transform: translateX(55%);
 
             @include respond(phone) {
@@ -63,9 +65,24 @@
         }
     }
 
+    h1 {
+        font-size: 4rem;
+
+        @include respond(phone) {
+            font-size: 3.5rem;
+        }
+        @include respond(sm-phone) {
+            font-size: 2.3rem;
+        }
+    }
+
 
     .heading {
         margin: 10rem 0 7rem;
         width: 100%;
+
+        @include respond(sm-phone) {
+            margin: 5rem 0 3rem;
+        }
     }
 }

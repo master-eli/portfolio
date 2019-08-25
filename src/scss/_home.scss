@@ -9,11 +9,14 @@
         top: calc(100vh - 90%);
         right: -30rem;
 
+        @include respond(tab-landscape) {
+            top: calc(100vh - 80%);
+        }
         @include respond(desktop) {
             top: calc(100vh - 90%);
         }
-        @include respond(tab-landscape) {
-            top: calc(100vh - 80%);
+        @include respond(big-desktop) {
+            right: -10rem;
         }
         img {
             width: 100%;

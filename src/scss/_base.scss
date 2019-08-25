@@ -36,6 +36,9 @@ html {
     font-family: $primary-font;
     color: $color-primary-font;
 
+    @include respond(sm-phone) {
+        font-size: 30%;
+    }
     @include respond(phone) {
         font-size: 50%;
     }
@@ -48,9 +51,12 @@ html {
     @include respond(desktop) {
         font-size: 62.5%; // 1rem = 12px
     }
+    @include respond(big-desktop) {
+        font-size: 90%; // 1rem = 12px
+    }
 }
 
-html, body {
+body {
     width: 100%;
     height: 100%;
     overflow: hidden;
@@ -64,9 +70,21 @@ html, body {
         overflow-x: hidden;
     }
 }
+.center {
+    display: grid;
+    place-items: center;
+    height: 80%;
+    // padding-top: 20rem;
+}
 
-// .contents {
-//     background-color: $color-contents-bg;
-//     width: 100%;
-//     height: 100%;
-// }
+.contents {
+    // background-color: $color-contents-bg;
+    width: 50vw;
+    height: 100%;
+    justify-self: center;
+    backface-visibility: hidden;
+
+    @include respond(tab-landscape) {
+        // margin-top: 15rem;
+    }
+}

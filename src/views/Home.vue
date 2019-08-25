@@ -1,9 +1,9 @@
 <template>
   <div class="home">
       <div class="name">
-            <div>
-                <h1>elizear john galapia</h1>
-                <h1>web developer.</h1>
+            <div class="text-holder">
+                <h1>elizear john galapia.</h1>
+                <h1 class="animated-text"> web developer <span>></span></h1>
             </div>
       </div>
       <div class="svg-bg">

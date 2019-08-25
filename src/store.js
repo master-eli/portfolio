@@ -27,7 +27,7 @@ export default new Vuex.Store({
       } else {
         commit('SET_ISLARGE', false)
       }
-      console.log(state.window.width)
+      // console.log(state.window.width)
     }
   }
 })

@@ -9,3 +9,27 @@
 .fade-leave-active {
   opacity: 0
 }
+
+.text-holder {
+  .animated-text {
+    display: inline-block;
+
+    &::before {
+      content: '<';
+    }
+    span {
+      &::before {
+        content: '/';
+        animation: blink .9s infinite ease-out;
+      }
+    }
+  }
+}
+@keyframes blink {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}

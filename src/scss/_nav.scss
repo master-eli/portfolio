@@ -9,13 +9,12 @@ nav {
             text-align: left;
             padding-left: 1rem;
             padding-bottom: .8rem;
-            transition: all .5s;
-            cursor: pointer;
             text-transform: uppercase;
             position: relative;
             color: transparent;
             width: 100%;
             text-decoration: none;
+            cursor: default;
 
             @include respond(desktop) {
                 font-size: 3rem;
@@ -28,19 +27,17 @@ nav {
                 color: black;
                 display: inline-block;
                 transform: translateY(0);
-                transition: all .6s;
+                transition: all 1s;
+                cursor: pointer;
             }
             
             span {
                 z-index: -1;
                 position: absolute;
-                transform: scaleX(1);
                 height: 2rem;
                 bottom: 1rem;
                 left: 0;
-                transition: all .2s;
-                background-color: $color-experience;
-                transition: all .6s;
+                transition: all .8s;
                 
                 @include respond(desktop) {
                     height: 2rem;
@@ -50,9 +47,6 @@ nav {
                 }
                 @include respond(tab-landscape) {
                     height: 1.5rem;
-                }
-                &:hover {
-                    height: 100%;
                 }
             }
 
@@ -105,22 +99,19 @@ nav {
                 }
             }
 
+            &:hover {
+                span {
+                    height: 90%;
+                }
+            }
+
             &.active {
-                transition: all .2s;
                 color: $color-primary-font;
 
                 &.nav-experience, 
                 &.nav-uiux,
                 &.nav-resume {
-                    transition: all .6s;
-                }
-
-                &.nav-experience:hover, 
-                &.nav-uiux:hover,
-                &.nav-resume:hover {
-                    h1 {
-                        transition: all .6s;
-                    }
+                    transition: all 1s;
                 }
 
                 h1 {
@@ -129,6 +120,17 @@ nav {
 
                 span {
                     width: 98%;
+                    height: 2rem;
+
+                    @include respond(desktop) {
+                        height: 2rem;
+                    }
+                    @include respond(mid-desktop) {
+                        height: 1.85rem;
+                    }
+                    @include respond(tab-landscape) {
+                        height: 1.5rem;
+                    }
                 }
             }
         }

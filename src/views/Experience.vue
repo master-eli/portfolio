@@ -1,5 +1,5 @@
 <template>
-    <div class="projects center padding-sides mt-md">
+    <div class="projects padding-sides mt-md center">
         <div class="heading exp" v-if="!isLarge">
             <h1 class="bold exp">Experience</h1>
         </div>

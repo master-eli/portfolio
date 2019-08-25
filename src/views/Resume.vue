@@ -1,5 +1,5 @@
 <template>
-    <div class="resume center mt-md">
+    <div class="resume mt-md center">
         <div class="heading resume" v-if="!isLarge">
             <h1 class="bold resume">Resume</h1>
         </div>
