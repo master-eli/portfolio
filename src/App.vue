@@ -5,7 +5,9 @@
         <app-sidebar></app-sidebar>
       </div>
       <div class="contents" v-if="isLarge">
-        <transition name="router-anim" enter-active-class="animated fadeInRight">
+        <!-- <transition name="router-anim" enter-active-class="animated fadeInRight"> -->
+        <transition name="pageSlide" 
+                    mode="out-in">
           <router-view></router-view>
         </transition>
       </div>

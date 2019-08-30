@@ -15,7 +15,7 @@
             </div>
             <div class="btn-more">
                 <h3 class="more-designs">
-                    <a href="https://drive.google.com/open?id=11iKvGZD75vz1b7CRblTmwelSE9JzQA3E" target="_blank">Download Resume</a>
+                    <a href="https://drive.google.com/open?id=1uR6i-SrHM5QCwmTSIS4KAAHFEG0x9e19" target="_blank">Download Resume</a>
                 </h3>
             </div>
         </div>

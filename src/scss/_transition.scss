@@ -33,3 +33,14 @@
     opacity: 1;
   }
 }
+
+.pageSlide-enter-active,
+.pageSlide-enter-leave {
+  transition: opacity 1.2s, transform .8s;
+}
+
+.pageSlide-enter,
+.pageSlide-leave {
+  opacity: 0;
+  transform: translateX(130%);
+}

@@ -74,14 +74,15 @@
                         width: 7%;
                     }
                     @include respond(phone) {
-                        left: -5rem;
+                        left: -5.5rem;
                         top: 25%;
-                        min-width: 13%;
+                        min-width: 10%;
                     }
                     @include respond(sm-phone) {
                         left: -5rem;
                         top: 15%;
-                        min-width: 20%;
+                        // min-width: 20%;
+                        min-width: 10%;
                     }
                 }
 

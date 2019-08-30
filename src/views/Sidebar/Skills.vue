@@ -6,6 +6,7 @@
         </div>
         <ul class="skills pl-sm" :class="{ 'container-sm': !isLarge }">
             <li class="medium"><svg class="html"> <rect fill="#799AE9"/></svg>HTML / CSS</li>
+            <li class="medium"><svg class="html"> <rect fill="#CD6799"/></svg>SCSS</li>
             <li class="medium"><svg class="js"> <rect fill="#FF9C2C"/></svg>Javascript</li>
             <li class="medium"><svg class="jquery"> <rect fill="#FFF953"/></svg>jQuery</li>
             <li class="medium"><svg class="vue"> <rect fill="#45FE9B"/></svg>Vue.js</li>

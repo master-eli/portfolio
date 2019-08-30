@@ -9,6 +9,10 @@
         // padding-top: 0rem;
         padding-top: 6rem;
     }
+    @include respond(tab-portrait) {
+        // padding-top: 0rem;
+        padding-top: 0rem;
+    }
 
     .img {
         img {
