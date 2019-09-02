@@ -14,7 +14,6 @@ export default new Router({
   routes: [
     {
       path: '/portfolio/',
-      // name: 'home',
       component: Home
     },
     {
@@ -31,6 +30,10 @@ export default new Router({
       path: '/resume',
       name: 'resume',
       component: Resume
+    },
+    {
+      path: '*',
+      component: Home
     },
   ]
 })
