@@ -32,7 +32,7 @@ export default new Router({
       component: Resume
     },
     {
-      path: '*',
+      path: '/*',
       component: Home
     },
   ]
