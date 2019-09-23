@@ -13,7 +13,8 @@ export default new Router({
   mode: 'history',
   routes: [
     {
-      path: '/portfolio/',
+      // path: '/portfolio/',
+      path: '/',
       component: Home
     },
     {
